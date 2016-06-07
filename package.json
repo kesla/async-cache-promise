@@ -1,0 +1,41 @@
+{
+  "name": "async-cache-promise",
+  "version": "0.0.0",
+  "description": "async-cache - but with promises",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "babel-tape-runner test.js",
+    "build": "rm -rf dist && mkdir -p dist && babel lib --out-dir dist",
+    "watch": "rm -rf dist && mkdir -p dist && babel -w lib --out-dir dist",
+    "prepublish": "npm run build",
+    "posttest": "package-json-to-readme package.json --travis > readme.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kesla/async-cache-promise.git"
+  },
+  "keywords": [
+    "asyc-cache",
+    "promise"
+  ],
+  "author": "David Björklund <david.bjorklund@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kesla/async-cache-promise/issues"
+  },
+  "homepage": "https://github.com/kesla/async-cache-promise#readme",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-tape-runner": "^2.0.1",
+    "semistandard": "^8.0.0",
+    "snazzy": "^4.0.0",
+    "tapava": "^2.1.4"
+  },
+  "dependencies": {
+    "async-cache": "^1.1.0",
+    "bluebird": "^3.4.0",
+    "immutable-object-methods": "^1.1.2"
+  }
+}
